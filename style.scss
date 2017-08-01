@@ -18,15 +18,14 @@ html {
 }
 
 body {
-background: $white;
+  background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 1070px;
-  padding: 0 10px;
+  padding: 0;
   width: 100%;
 }
 
@@ -69,7 +68,7 @@ p {
 }
 
 a {
-  color: $blue;
+  color: rgb(40, 94, 29);
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
@@ -194,7 +193,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: $white;
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -204,7 +203,7 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: $lightgray;
   font-size: 16px;
 
   @include mobile {
