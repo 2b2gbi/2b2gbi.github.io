@@ -68,7 +68,7 @@ p {
 }
 
 a {
-  color: rgb(40, 94, 29);
+  color: $green;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
@@ -156,10 +156,14 @@ img {
 .masthead {
   padding: 20px;
   border-bottom: 1px solid $lightGray;
-  background-color: $blue;
+  background-color: $green;
 
   @include mobile {
     text-align: center;
+  }
+    
+  a {
+     color: $lightGrey;   
   }
 }
 
