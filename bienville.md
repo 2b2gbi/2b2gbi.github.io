@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Bienville Info
+title: Bienville, Missouri
 permalink: /bienville/
 ---
 
-Some information about you!
+Some information about Bienville!
 
 ### Bienville, Missouri
 
-A place to include any other types of information that you'd like to include about yourself.
+A place to include any other types of information that you'd like to include about BienvilleS.
 
 ### Contact me
 
