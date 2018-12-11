@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Bootheel Chemical Company
+title: Bienville Teaser 1
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+A quick peak at an industrial facility, owned by the Bootheel Chemical Company, located along the riverfront in Bienville's historic River Market district.
 
 ![Bootheel Chemical Company]({{ site.baseurl }}/images/Bienville1.jpg)
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+The Bootheel Chemical Company was founded in 1966 by a group of local businessmen and provides and transports a variety of chemical products throughout Southeastern Missouri, Western Kentucky, and Southern Illinois. This facility, located close to downtown Bienville, is a secondary shipping and storage facility with a dock on the river to allow for the transportation of chemicals in ships and barges along the Mississippi.
