@@ -6,6 +6,8 @@ permalink: /bienville/
 
 Bienville, Missouri is a fictional city located in Southeastern Missouri along the Mississippi River. The city is named for the French explorer and second colonial governor of Louisiana, Jean-Baptiste Le Moyne de Bienville.
 
+![Map depicting the location of Bienville in Southeastern Missouri south of Cairo, Illinois](https://i.imgur.com/CI6WF2Q.png "Location of Bienville")
+
 ### History
 
 #### Early History

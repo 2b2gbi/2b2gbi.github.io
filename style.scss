@@ -155,7 +155,7 @@ img {
 
 .masthead {
   padding: 20px;
-  border-bottom: 1px solid $blue;
+  border-bottom: 1px solid $orange;
   background-color: $white;
 
   @include mobile {
@@ -276,6 +276,10 @@ nav {
     font-size: 22px;
     font-style: italic;
   }
+    
+  img {
+     border: 3px solid $orange;   
+   }
 
   .comments {
     margin-top: 10px;
