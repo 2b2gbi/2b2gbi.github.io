@@ -18,9 +18,9 @@ html {
 }
 
 body {
-  background: $blue;
+  background: $lightGray;
   font: 18px/1.4 $helvetica;
-  color: $lightGray;
+  color: $darkGray;
 }
 
 .container {
@@ -155,7 +155,7 @@ img {
 
 .masthead {
   padding: 20px;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid $blue;
   background-color: $white;
 
   @include mobile {
@@ -163,8 +163,17 @@ img {
   }
     
   a {
-     color: $lightGray;   
+     color: $blue;
+     &:hover, &:active {
+    color: $orange;
   }
+  }
+}
+
+.subheader {
+    width: 100%;
+    height: 100px;
+    background-image: url(images/cjbanner.jpg);
 }
 
 .site-avatar {
@@ -197,17 +206,17 @@ img {
 
 .site-name {
   margin: 0;
-  color: $white;
+  color: $darkGray;
   cursor: pointer;
   font-family: $helveticaNeue;
-  font-weight: 300;
+  font-weight: 800;
   font-size: 28px;
   letter-spacing: 1px;
 }
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $lightGray;
+  color: $darkGray;
   font-size: 16px;
 
   @include mobile {
@@ -291,6 +300,8 @@ nav {
 footer {
   padding: 20px 0;
   text-align: center;
+    color: $gray;
+    font-size: 14px;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
