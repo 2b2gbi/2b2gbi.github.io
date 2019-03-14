@@ -6,7 +6,7 @@ title: Bienville Update Two
 Hello Everyone!
 
 Welcome back for the second update of Bienville. It took a little longer than I intended due to some game issues and real life, but I hope you enjoy what i have to share. In this update we'll continue our tour of the River Market and Bertling Park districts of Bienville. If this is your first time reading, I recommend you go back to the first entry and read the introduction to the city and the districts we're exploring. 
-
+<!-- more -->
 Our first location today is an area inside the River Market District known as Gardner Mill. The neighborhood is named for a large textile mill that once occupied the area East of Second Street between New Madrid Street and Illinois Avenue.
 
 ![Gardner Mill Neighborhood](https://i.imgur.com/EWhr5OR.jpg "Gardner Mill Neighborhood")
