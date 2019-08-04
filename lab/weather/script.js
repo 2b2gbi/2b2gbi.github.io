@@ -14,46 +14,44 @@ function position(position) {
   let temperatureDescription = document.getElementById('temperature-description');
   let temperatureDegree = document.getElementById('temp-display');
   let weatherLocation = document.getElementById('loc');
-  console.log(lat);
-  console.log(long);
+  let weatherState = document.getElementById('state');
+  let temperatureSection = document.getElementById('temperature');
+  let temperatureUnit = document.getElementById('unit-display');
   const proxy = `https://cors-anywhere.herokuapp.com/`;
   const weatherapi = `${proxy}https://api.darksky.net/forecast/dabc8fd40d6b6b4b8ad61286125025d1/${lat},${long}`;
-  console.log(weatherapi);
+  const locationapi = `${proxy}https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox=${lat}%2C${long}%2C250&mode=retrieveAddresses&maxresults=1&gen=9&app_id=yHr3fcUxWfT1SP5vX5GU&app_code=rIqVZg5zXFqu4Qmjd0-kaQ`;
   
   fetch(weatherapi)
     .then(response => {
       return response.json();
     })
     .then(data => {
-      console.log(data);
-      const {temperature, summary, timezone} = data.currently;
+      const {temperature, summary, icon} = data.currently;
       // Set DOM Elements from the API
       temperatureDegree.innerHTML = Math.round(temperature);
       temperatureDescription.innerHTML = summary;
-      weatherLocation.innerHTML = timezone;
+      let celsius = (temperature -32) * (5 / 9)
+      setIcons(icon, document.getElementById('icon'));
+      temperatureSection.addEventListener('click', () =>{
+        if(temperatureUnit.innerHTML === "F"){
+          temperatureUnit.innerHTML = "C";
+          temperatureDegree.innerHTML = Math.round(celsius);
+        } else {
+          temperatureUnit.innerHTML = "F";
+          temperatureDegree.innerHTML = Math.round(temperature);
+        }
+      })
     })
-  
-    var platform= new H.service.Platform({
-      'apikey':'{jOxBIE4MGMGxcwBqkxS--gZXWNps_2kckhyL6gN6YJ0}'
-    });
 
-  var reverseGeocodingParameters = {
-    prox: `${lat},${long}`,
-    mode: 'retrieveAddresses',
-    maxresults: 1
-  };
-
-  function onSuccess(result) {
-    var location = result.Response.View[0].Result[0];
-  };
-
-  var geocoder = platform.getGeocodingService();
-
-  geocoder.reverseGeocode(
-    reverseGeocodingParameters,
-    onSuccess,
-    function(e) { alert(e); });
-
+  fetch(locationapi)
+  .then(response => {
+    return response.json();
+  })
+  .then(locdata => {
+    const {City} = locdata.Response.View[0].Result[0].Location.Address  //Response.View[""0""].Result[""0""].Location.Address Response.View[""0""].Result[""0""].Location.Address.AdditionalData[""0""].value
+    weatherLocation.innerHTML = City;
+    weatherState.innerHTML = locdata.Response.View[0].Result[0].Location.Address.AdditionalData[1].value + ",&nbsp;" + locdata.Response.View[0].Result[0].Location.Address.AdditionalData[0].value;
+  })
 }
     
 function showError(error) {
@@ -76,4 +74,11 @@ function showError(error) {
           document.getElementById("noGeo").classList.add("show");
           break;
     }
+}
+
+function setIcons (icon, iconID){
+  const skycons = new Skycons({color:"white"});
+  const currentIcon = icon.replace(/-/g, "_").toUpperCase();
+  skycons.play();
+  return skycons.set(iconID, Skycons[currentIcon]);
 }
