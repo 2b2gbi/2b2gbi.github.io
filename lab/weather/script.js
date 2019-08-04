@@ -19,7 +19,7 @@ function position(position) {
   let temperatureUnit = document.getElementById('unit-display');
   const proxy = `https://cors-anywhere.herokuapp.com/`;
   const weatherapi = `${proxy}https://api.darksky.net/forecast/dabc8fd40d6b6b4b8ad61286125025d1/${lat},${long}`;
-  const locationapi = `${proxy}https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox=${lat}%2C${long}%2C250&mode=retrieveAddresses&maxresults=1&gen=9&app_id=yHr3fcUxWfT1SP5vX5GU&app_code=rIqVZg5zXFqu4Qmjd0-kaQ`;
+  const locationapi = `https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox=${lat}%2C${long}%2C250&mode=retrieveAddresses&maxresults=1&gen=9&app_id=yHr3fcUxWfT1SP5vX5GU&app_code=rIqVZg5zXFqu4Qmjd0-kaQ`;
   
   fetch(weatherapi)
     .then(response => {
