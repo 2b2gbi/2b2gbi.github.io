@@ -8,7 +8,6 @@
         body{
             margin-top: 70px;
             background: #333;
-            color: #fff;
         }
         #output {
             visibility: hidden;
@@ -20,11 +19,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <h1 class="display-4 text-center mb-3">Weight Converter</h1>
+                <h1 class="display-4 text-center mb-3 text-light">Weight Converter</h1>
                 <form>
                     <div class="form-group">
                         <div class="input-group ">
-                            <select name="modeSelect" id="modeSelect" class="form-control form-control-lg" placeholder="Units">
+                            <select name="modeSelect" id="modeSelect" class="form-control form-control-lg bg-light" placeholder="Units">
                                <option value="0" selected disabled hidden>Unit to Convert</option>
                                <option value="1">Pounds</option>
                                <option value="2">Grams</option>
@@ -35,7 +34,7 @@
                         </div>
                     </div>
                 </form>
-                <div id="output">
+                <div id="output" class="text-light">
                     <div class="card bg-info mb-2">
                         <div class="card-body">
                             <h4>Pounds:</h4>
